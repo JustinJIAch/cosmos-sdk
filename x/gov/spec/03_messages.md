@@ -49,7 +49,7 @@ upon receiving txGovSubmitProposal from sender do
     throw
 
   if (txGovSubmitProposal.Type != ProposalTypePlainText) OR (txGovSubmitProposal.Type != ProposalTypeSoftwareUpgrade)
-
+    throw
   sender.AtomBalance -= initialDeposit.Atoms
 
   depositParam = load(GlobalParams, 'DepositParam')
